@@ -1,0 +1,46 @@
+.nav-pills {
+    padding: 0;
+}
+
+.nav-link:hover {
+    background-color: #ddd;
+    color: #000 !important;
+}
+
+.myForm {
+    width: 50%;
+    position: absolute;
+    top: 85px;
+    right: 34%;
+}
+
+#editor,
+#editor2,
+#editorBlog {
+    position: relative;
+    height: 405px;
+    overflow-y: scroll;
+}
+
+#editorBlog {
+    height: 220px;
+}
+
+.blogs {
+    width: 80%;
+    position: absolute;
+    top: 120px;
+    right: 19%;
+    display: block;
+}
+
+.side-bar {
+    height: 560px;
+}
+
+.rm-form {
+    position: relative;
+    top: -38px;
+    right: 171px;
+    width: 61px;
+}

@@ -1,0 +1,27 @@
+header{
+    height: 200px;
+    background-image: url('/img/backg.png');
+    margin-bottom: 50px;
+}
+header .p-img{
+    text-align: left;
+}
+header .p-img img{
+    height: 150px;
+    margin-top: 95px;
+}
+header h1{
+    position: relative;
+    top: -170px;
+    right: 39%;
+    width: 224px;
+    color: #fff;
+}
+.brief-con img{
+    max-width: 100%;
+}
+@media (max-width: 720px){
+    header h1{
+        right: 0;
+    }
+}

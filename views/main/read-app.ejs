@@ -1,0 +1,47 @@
+<%- include('../lay-outs/head') %>
+<%- include('../lay-outs/nav') %>
+<link rel="stylesheet" href="/css/main/light-read.css">
+<header>
+    <div class="container">
+        <h1>تطبيق القراءة السريعة</h1>
+        <h4>لتنمية مهارتي القراءة السريعة و الفهم القرائي</h4>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="str col-12">
+            <!-- <div class="tex">لحساب سرعة القراءة الخاصة بك عليك اتباع التعليمات التالية:</div> -->
+            <li class="list-group-item tex" value="5">لحساب سرعة القراءة الخاصة بك عليك اتباع التعليمات التالية:</li>
+            <ol class="list-group list-group-numbered">
+                <%if(r){%>
+                <% r.read.forEach( r=>{%>
+                <li class="list-group-item"><%=r%></li>
+                <%})%>
+                <%}%>
+            </ol>
+        </div>
+    </div>
+    <div class="row" style="    margin-top: 20px;
+    background-color: #F8EFE6;
+    height: 350px;">
+        <div class="choose col-lg-6">
+            <div class="menu">
+                <h1>اختيار القطعة:</h1>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        اختار الدرس
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <%for(let i=0; i < t.length; i++){%>
+                <li><a class="dropdown-item" href="/tes-read/<%=t[i]._id%>"><%= t[i].title%></a></li>
+                <%}%>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <img class="col-6 read-img" src="/img/book.jpg" alt="" style="height: 100%;">
+    </div>
+</div>
+<%- include('../lay-outs/icon-bar') %>
+                <%- include('../lay-outs/footer') %>
