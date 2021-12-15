@@ -31,7 +31,7 @@ app.use((req, res, next) => {
     }
     next();
 })
-app.use('/logout', (req, res, next) => {
+app.use('/logout', ( req, res, next) => {
     req.session.destroy()
     res.redirect('/');
 })
