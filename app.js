@@ -60,7 +60,7 @@ app.use('/test-result/619660c6443fe7b1076f6b94', (req, res, next) => {
 })
 app.listen(port, () => {
     console.log(`Elearning app listening at http://localhost:${port}`);
-    mongoose.connect('mongodb+srv://amer:753698@cluster0.utxxi.mongodb.net/speedreading?retryWrites=true&w=majority')
+    mongoose.connect(db_url)
         .then(result => {
             console.log('conectet to database');
             User.findOne({
